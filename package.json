@@ -20,7 +20,8 @@
     "build": "tsdown",
     "lint": "oxfmt --check ./ && oxlint ./",
     "lint:fix": "oxlint --fix ./",
-    "format": "oxfmt ./"
+    "format": "oxfmt ./",
+    "typecheck": "tsc --noEmit ./src"
   },
   "dependencies": {
     "@toon-format/toon": "^4.1.1"
