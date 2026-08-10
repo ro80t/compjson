@@ -26,9 +26,9 @@
   },
   "scripts": {
     "build": "tsdown",
-    "lint": "oxfmt --check ./src/ && oxlint ./src/",
-    "lint:fix": "oxlint --fix ./src/",
-    "format": "oxfmt ./src/"
+    "lint": "oxfmt --check ./ && oxlint ./",
+    "lint:fix": "oxlint --fix ./",
+    "format": "oxfmt ./"
   },
   "type": "module",
   "dependencies": {
