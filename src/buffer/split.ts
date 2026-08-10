@@ -11,3 +11,7 @@ export function splitBuf(buf: Buffer, num: number): Buffer[] {
 export function split8(buf: Buffer): Buffer[] {
   return splitBuf(buf, 8);
 }
+
+export function split9(buf: Buffer): Buffer[] {
+  return splitBuf(buf, 9);
+}
