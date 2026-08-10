@@ -1,21 +1,16 @@
 import { describe, expect, it } from "vitest";
+
 import { split8, split9, splitBuf } from "./split.js";
 
 describe("splitBuf", () => {
   it("splits an exact multiple of the chunk size into equal chunks", () => {
     const buf = Buffer.from([0, 1, 2, 3, 4, 5, 6, 7]);
-    expect(splitBuf(buf, 4)).toEqual([
-      Buffer.from([0, 1, 2, 3]),
-      Buffer.from([4, 5, 6, 7]),
-    ]);
+    expect(splitBuf(buf, 4)).toEqual([Buffer.from([0, 1, 2, 3]), Buffer.from([4, 5, 6, 7])]);
   });
 
   it("keeps a shorter final chunk when the length isn't a multiple", () => {
     const buf = Buffer.from([0, 1, 2, 3, 4, 5, 6]);
-    expect(splitBuf(buf, 4)).toEqual([
-      Buffer.from([0, 1, 2, 3]),
-      Buffer.from([4, 5, 6]),
-    ]);
+    expect(splitBuf(buf, 4)).toEqual([Buffer.from([0, 1, 2, 3]), Buffer.from([4, 5, 6])]);
   });
 
   it("reproduces the original buffer when chunks are concatenated", () => {
@@ -35,10 +30,7 @@ describe("splitBuf", () => {
 
   it("handles high byte values (>= 0x80) without sign issues", () => {
     const buf = Buffer.from([0xff, 0xf1, 0x80, 0x7f]);
-    expect(splitBuf(buf, 2)).toEqual([
-      Buffer.from([0xff, 0xf1]),
-      Buffer.from([0x80, 0x7f]),
-    ]);
+    expect(splitBuf(buf, 2)).toEqual([Buffer.from([0xff, 0xf1]), Buffer.from([0x80, 0x7f])]);
   });
 });
 
