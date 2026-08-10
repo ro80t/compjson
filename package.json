@@ -1,25 +1,6 @@
 {
   "name": "compjson",
   "version": "0.0.0",
-  "type": "module",
-  "license": "MIT",
-  "scripts": {
-    "build": "tsdown",
-    "lint": "oxfmt --check ./src/ && oxlint ./src/",
-    "lint:fix": "oxlint --fix ./src/",
-    "format": "oxfmt ./src/"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
-  "exports": {
-    ".": {
-      "types": "./dist/index.mts",
-      "import": "./dist/index.mjs"
-    }
-  },
-  "files": ["dist"],
   "devDependencies": {
     "@changesets/cli": "^2.31.1",
     "@types/bun": "1.3.14",
@@ -30,5 +11,27 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": ["dist"],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "lint": "oxfmt --check ./src/ && oxlint ./src/",
+    "lint:fix": "oxlint --fix ./src/",
+    "format": "oxfmt ./src/"
+  },
+  "type": "module",
+  "dependencies": {
+    "@toon-format/toon": "^4.1.1"
   }
 }
