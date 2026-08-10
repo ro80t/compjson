@@ -21,7 +21,8 @@
     "lint": "oxfmt --check ./ && oxlint ./",
     "lint:fix": "oxlint --fix ./",
     "format": "oxfmt ./",
-    "typecheck": "tsc --noEmit ./src"
+    "typecheck": "tsc --noEmit ./src",
+    "test": "vitest run"
   },
   "dependencies": {
     "@toon-format/toon": "^4.1.1"
@@ -32,7 +33,8 @@
     "@types/node": "24.1.0",
     "oxfmt": "^0.63.0",
     "oxlint": "^1.78.0",
-    "tsdown": "^0.22.14"
+    "tsdown": "^0.22.14",
+    "vitest": "^4.1.10"
   },
   "peerDependencies": {
     "typescript": "^5"

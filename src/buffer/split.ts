@@ -2,7 +2,7 @@ export function splitBuf(buf: Buffer, num: number): Buffer[] {
   const chunks: Buffer[] = [];
 
   for (let i = 0; i < buf.length; i += num) {
-    chunks.push(buf.subarray(i, i + (num - 1)));
+    chunks.push(buf.subarray(i, i + num));
   }
 
   return chunks;
