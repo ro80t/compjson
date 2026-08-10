@@ -7,9 +7,4 @@ export default defineConfig([
     clean: true,
     format: ["esm", "cjs"],
   },
-  {
-    entry: "src/cli.ts",
-    dts: true,
-    clean: true,
-  },
 ]);
