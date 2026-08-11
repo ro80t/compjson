@@ -1,3 +1,2 @@
-export function encode(_content: string) {}
-
-export function decode(_content: string) {}
+export { encode } from "./encode/index";
+export { decode } from "./decode/index";
