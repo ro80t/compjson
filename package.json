@@ -21,7 +21,7 @@
     "lint": "oxfmt --check ./ && oxlint ./",
     "lint:fix": "oxlint --fix ./",
     "format": "oxfmt ./",
-    "typecheck": "tsc --noEmit ./src",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },
   "dependencies": {
